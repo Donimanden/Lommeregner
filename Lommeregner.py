@@ -4,7 +4,7 @@
 import matplotlib as mpl
 import numpy as num
 import sys
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget
+from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QPushButton
 
 #vi fortæller programmet at den skal kunne køre??? idk. slet ikke. 
 app = QApplication([]) 
