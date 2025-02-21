@@ -33,3 +33,5 @@ sys.exit(app.exec())
 def kvadratrod():
     palceholder=1
 
+def potens(n, X):
+    return X**n
