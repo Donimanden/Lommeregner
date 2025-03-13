@@ -1,4 +1,4 @@
-#Vi importere matplotlib og numpy til at lave bedre matematik, google det.
+#Vi importere matplotlib og numpy til at lave bedre matematik, google det din abe. 
 #vi importere sys til at kunne kontrollere systemet, den er vigtig fordi den lukker appen når vi er færdige. 
 #vi importere Pyqt og dens dele for at kunne skabe vinduet. jeg ved ikke hvad delene gør. 
 import matplotlib as mpl
