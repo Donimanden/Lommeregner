@@ -4,7 +4,16 @@
 import matplotlib as mpl
 import numpy as num
 import sys
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QPushButton
+from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QPushButton 
+
+def kvadratrod():
+    print("hej")
+
+def potens(X, n):
+    return X**n
+
+def plus(y, x):
+    return y+x
 
 #vi fortæller programmet at den skal kunne køre??? idk. slet ikke. 
 app = QApplication([]) 
@@ -13,9 +22,16 @@ app = QApplication([])
 #vi sætter indstillingerne for vores vindue. 
 window = QWidget()
 window.setWindowTitle("Lommeregner")
-window.setGeometry(100, 100, 280, 80)
+window.setGeometry(1000, 1000, 500, 500)
 helloMsg = QLabel("Hej Frederik", parent=window)
 helloMsg.move(60, 15) 
+
+#kvadratrodknap 
+kvadratrodknap = QPushButton(parent=window, text="kvadratrod")
+kvadratrodknap.move(100,100)
+kvadratrodknap.clicked.connect(kvadratrod)
+
+
 
 #vi viser vores vindue
 window.show()
@@ -30,8 +46,3 @@ sys.exit(app.exec())
 #Der er også en sekunder, mere optimal men mere avanceret rekursiv formel som udregner 1/sqrt(a)
 #Man skal altså inputte resultatet 1/sqrt(a) i 1/x så der står 1/1/sqrt(a) hvilket giver sqrt(a)
 #formellen ser sådan ud: X_n+1=((3/2)*x_n-((x_n*x_n*x_n*a)/2)) 
-def kvadratrod():
-    palceholder=1
-
-def potens(n, X):
-    return X**n
