@@ -1,0 +1,7 @@
+regnefelt = []
+operatore=[+,-,%,*,/]
+
+read "regnefelt" 
+for hvert symbol skal tjekke om det er et tal eller en operator. 
+Hvis operator: gør relevant for operator og læs tal. f.eks: hvis plus: gå 1 tilbage, læs tal, gå 2 frem, læs tal. læg sammen. 
+Hvis tal: skip. medmindre, der har aktiveret en operator tidligere. 
