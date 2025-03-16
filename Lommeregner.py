@@ -6,6 +6,20 @@ import numpy as num
 import sys
 from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QPushButton 
 
+Regnefelt = [] 
+Operator = ["+","-","/","*","sqrt","^"]
+#Hvordan implementere man parenteser? 
+
+for i in range(0,9):
+    def func(): 
+        return i        
+
+class Tal_knap():
+    def __init__(self,tal):
+        self.tal=tal
+    def skriver_tal(self, tal): 
+        return tal
+
 def kvadratrod():
     print("hej")
 
@@ -14,6 +28,13 @@ def potens(X, n):
 
 def plus(y, x):
     return y+x
+
+def udregn(): 
+    if Regnefelt[0] in Operator: #Checker om det første er en operator, burde være en loop istedet. For at gøre det muligt med uendelige mængder af tal. 
+        return "macdonalds" 
+    else:
+        return "bla bla bla" 
+
 
 #vi fortæller programmet at den skal kunne køre??? idk. slet ikke. 
 app = QApplication([]) 
@@ -31,8 +52,21 @@ kvadratrodknap = QPushButton(parent=window, text="kvadratrod")
 kvadratrodknap.move(100,100)
 kvadratrodknap.clicked.connect(kvadratrod)
 
-
-
+knap_1 = QPushButton(parent=window, text="kvadratrod")
+knap_1.move(100,100)
+#knap_1.clicked.connect(func_1) 
+'''
+operator_knapper = {
+    "+": QPushButton("+"),
+    "-": QPushButton("-"),
+    "*": QPushButton("*"),
+    "/": QPushButton("/"),
+    "sqrt": QPushButton("√"),
+    "^": QPushButton("^"),
+    "=": QPushButton("="),
+    "C": QPushButton("C")
+}
+'''
 #vi viser vores vindue
 window.show()
 
