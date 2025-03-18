@@ -1,6 +1,6 @@
 #Vi importere matplotlib og numpy til at lave bedre matematik, google det din abe. 
 #vi importere sys til at kunne kontrollere systemet, den er vigtig fordi den lukker appen når vi er færdige. 
-#vi importere Pyqt og dens dele for at kunne skabe vinduet. jeg ved ikke hvad delene gør. 
+#vi importere Pyqt og dens dele for at kunne skabe vinduet. 
 import matplotlib as mpl
 import numpy as num
 import sys
@@ -10,16 +10,18 @@ Regnefelt = []
 Operator = ["+","-","/","*","sqrt","^"]
 #Hvordan implementere man parenteser? 
 
-for i in range(0,9):
-    def func(): 
-        return i        
-
+def tal_knap():
+    return lambda a : Regnefelt.append(a) 
+talene_knap=tal_knap() 
+talene_knap(11)
+print(Regnefelt)
+'''
 class Tal_knap():
     def __init__(self,tal):
         self.tal=tal
     def skriver_tal(self, tal): 
         return tal
-
+'''
 def kvadratrod():
     print("hej")
 
@@ -35,6 +37,10 @@ def udregn():
     else:
         return "bla bla bla" 
 
+def ryd():
+    global Regnefelt
+    Regnefelt=[]
+
 
 #vi fortæller programmet at den skal kunne køre??? idk. slet ikke. 
 app = QApplication([]) 
@@ -43,7 +49,7 @@ app = QApplication([])
 #vi sætter indstillingerne for vores vindue. 
 window = QWidget()
 window.setWindowTitle("Lommeregner")
-window.setGeometry(1000, 1000, 500, 500)
+window.setGeometry(100, 100, 500, 500)
 helloMsg = QLabel("Hej Frederik", parent=window)
 helloMsg.move(60, 15) 
 
@@ -67,10 +73,11 @@ operator_knapper = {
     "C": QPushButton("C")
 }
 '''
+
 #vi viser vores vindue
 window.show()
 
-#vi køre appen og gør så vi kan lukke den igen. 
+#vi køre appen og gør så vi kan lukke den igen. INTET MÅ STÅ EFTER DETTE. 
 sys.exit(app.exec()) 
 
 
